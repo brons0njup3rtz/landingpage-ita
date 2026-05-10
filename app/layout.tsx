@@ -10,8 +10,8 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Jess ❤️ — Disponibile Ora",
-  description: "Connettiti con me su Telegram. Online e in cerca di un partner per contenuti vicino a te.",
+  title: "Jess ❤️ — Disponible Ahora",
+  description: "Conéctate conmigo en Telegram. En línea y buscando un compañero para contenido cerca de ti.",
   generator: "v0.app",
   icons: {
     icon: [
@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="it">
+    <html lang="es">
       <head>
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
