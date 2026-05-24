@@ -50,7 +50,7 @@ export default function RootLayout({
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '971054045846951');
+            fbq('init', '1558886002425046');
             fbq('track', 'PageView');
           `}
         </Script>
@@ -59,7 +59,7 @@ export default function RootLayout({
             height="1"
             width="1"
             style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=971054045846951&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=1558886002425046&ev=PageView&noscript=1"
             alt=""
           />
         </noscript>
@@ -79,7 +79,7 @@ export default function RootLayout({
           id="tgtrc-script"
           src="https://dash.tgtracker.io/api/v2/button-script.js"
           data-target-url=""
-          data-target-fbp="971054045846951"
+          data-target-fbp="1558886002425046"
           strategy="afterInteractive"
         />
 
