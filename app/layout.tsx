@@ -10,8 +10,8 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Jess ❤️ — Disponible Ahora",
-  description: "Conéctate conmigo en Telegram. En línea y buscando un compañero para contenido cerca de ti.",
+  title: "Jess ❤️ — Disponibile Ora",
+  description: "Connettiti con me su Telegram. Online e in cerca di un compagno per contenuti vicino a te.",
   generator: "v0.app",
   icons: {
     icon: [
@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es">
+    <html lang="it">
       <head>
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
@@ -50,7 +50,7 @@ export default function RootLayout({
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1297474259134397');
+            fbq('init', '971054045846951');
             fbq('track', 'PageView');
           `}
         </Script>
@@ -59,7 +59,7 @@ export default function RootLayout({
             height="1"
             width="1"
             style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=1297474259134397&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=971054045846951&ev=PageView&noscript=1"
             alt=""
           />
         </noscript>
@@ -79,7 +79,7 @@ export default function RootLayout({
           id="tgtrc-script"
           src="https://dash.tgtracker.io/api/v2/button-script.js"
           data-target-url=""
-          data-target-fbp="1297474259134397"
+          data-target-fbp="971054045846951"
           strategy="afterInteractive"
         />
 

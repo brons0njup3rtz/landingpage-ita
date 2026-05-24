@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { MapPin } from "lucide-react"
 
 export default function ProfilePage() {
-  const [userLocation, setUserLocation] = useState({ city: "Madrid", country: "España", ip: "" })
+  const [userLocation, setUserLocation] = useState({ city: "Roma", country: "Italia", ip: "" })
   const [isLoadingLocation, setIsLoadingLocation] = useState(true)
 
   useEffect(() => {
@@ -14,8 +14,8 @@ export default function ProfilePage() {
         if (!response.ok) throw new Error("Location fetch failed")
         const data = await response.json()
         setUserLocation({
-          city: data.city || "Madrid",
-          country: data.country_name || "España",
+          city: data.city || "Roma",
+          country: data.country_name || "Italia",
           ip: data.ip || "",
         })
       } catch (error) {
@@ -24,14 +24,14 @@ export default function ProfilePage() {
           const fallbackResponse = await fetch("https://ip-api.com/json/?fields=city,country,query")
           const fallbackData = await fallbackResponse.json()
           setUserLocation({
-            city: fallbackData.city || "Madrid",
-            country: fallbackData.country || "España",
+            city: fallbackData.city || "Roma",
+            country: fallbackData.country || "Italia",
             ip: fallbackData.query || "",
           })
         } catch {
           setUserLocation({
-            city: "Madrid",
-            country: "España",
+            city: "Roma",
+            country: "Italia",
             ip: "",
           })
         }
@@ -78,10 +78,10 @@ export default function ProfilePage() {
             <div className="flex flex-col gap-2 items-center">
               <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/90 text-white text-sm font-medium shadow-lg">
                 <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                En Línea
+                Online
               </div>
               <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium">
-                ⚡ Responde rápidamente
+                ⚡ Risponde velocemente
               </div>
             </div>
 
@@ -93,7 +93,7 @@ export default function ProfilePage() {
 
           <div className="mb-6 text-center">
             <p className="text-white text-lg leading-relaxed">
-              Hola, soy Jess y estoy buscando un compañero para contenido 🌶️ {!isLoadingLocation && `en ${userLocation.city}`}.
+              Ciao, sono Jess e sto cercando un compagno per contenuti 🌶️ {!isLoadingLocation && `a ${userLocation.city}`}.
             </p>
           </div>
 
@@ -105,7 +105,7 @@ export default function ProfilePage() {
             <span className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300" />
             <span className="relative flex items-center justify-center">
               <img src="/telegram-logo.svg" alt="Telegram" className="w-6 h-6 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-              SOLO RESPONDO AQUÍ
+              RISPONDO SOLO QUI
             </span>
           </button>
 
