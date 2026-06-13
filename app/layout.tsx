@@ -50,19 +50,9 @@ export default function RootLayout({
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '979286171416495');
-            fbq('track', 'PageView');
+            fbq('init', '1697695641361199');
           `}
         </Script>
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=979286171416495&ev=PageView&noscript=1"
-            alt=""
-          />
-        </noscript>
 
         {/* 1) Choose random Instagram target URL */}
         <Script id="ig-url-picker" strategy="beforeInteractive">
@@ -79,7 +69,7 @@ export default function RootLayout({
           id="tgtrc-script"
           src="https://dash.tgtracker.io/api/v2/button-script.js"
           data-target-url=""
-          data-target-fbp="979286171416495"
+          data-target-fbp="1697695641361199"
           strategy="afterInteractive"
         />
 
@@ -90,30 +80,6 @@ export default function RootLayout({
               const el = document.getElementById("tgtrc-script");
               if (el && window.TGTRACKER_TARGET_URL) {
                 el.setAttribute("data-target-url", window.TGTRACKER_TARGET_URL);
-              }
-            })();
-          `}
-        </Script>
-
-        <Script id="fb-contact-on-button-click" strategy="afterInteractive">
-          {`
-            (function () {
-              const bindContactTracking = function () {
-                const button = document.getElementById("tgtrc-button");
-                if (!button || button.dataset.fbContactBound === "true") return;
-
-                button.dataset.fbContactBound = "true";
-                button.addEventListener("click", function () {
-                  if (typeof window.fbq === "function") {
-                    window.fbq("track", "Contact");
-                  }
-                });
-              };
-
-              if (document.readyState === "loading") {
-                document.addEventListener("DOMContentLoaded", bindContactTracking);
-              } else {
-                bindContactTracking();
               }
             })();
           `}
